@@ -217,20 +217,47 @@ aside h2 > svg {
 
 .projects {
 	grid-row: 1/3;
+	display: flex;
+	gap: 5px;
+	padding: 10px;
+	flex-direction: column;
 }
 
 .card-container {
+	flex: 1;
 	display: grid;
-	height: 90%;
 	grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
 	gap: 5%;
 }
 
-.cards {
-	background-color: aliceblue;
+.announcements {
+	display: flex;
+	gap: 5px;
+	padding: 10px;
+	flex-direction: column;
+}
+
+.announcements-container {
+	flex: 1;
+	display: grid;
+}
+
+.trending {
+	display: flex;
+	gap: 5px;
+	padding: 10px;
+	flex-direction: column;
+}
+
+.trending-container {
+	flex: 1;
+	display: grid;
 }
 
 footer {
 	background-color: rgba(11, 28, 83, 0.15);
 	grid-column: 2/3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
