@@ -195,7 +195,6 @@ aside a {
 
 	&:hover {
 		transform: scale(1.1);
-		color: #d7f0ff;
 	}
 }
 
@@ -245,6 +244,12 @@ aside h2 > svg {
 	border-radius: 1rem;
 	padding: 2rem 1rem 1rem 1rem;
 	border-left: 0.4rem solid rgb(255, 199, 211);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.toolbar {
+		align-self: flex-end;
+	}
 }
 
 .my-projects h3 {
@@ -259,6 +264,17 @@ aside h2 > svg {
 	font-weight: 400;
 	color: rgba(0, 0, 0, 0.85);
 	margin-bottom: 0.2rem;
+}
+
+.my-projects svg {
+	height: 30px;
+	width: 30px;
+	color: rgba(0, 0, 0, 0.9);
+	margin-left: 5px;
+	&:hover {
+		transform: scale(1.1);
+		fill: rgb(47, 172, 255);
+	}
 }
 
 .announcements {
@@ -290,13 +306,42 @@ aside h2 > svg {
 .trending {
 	display: flex;
 	gap: 5px;
-	padding: 2rem 2rem 2rem 0;
+	padding: 0 2rem 2rem 0;
 	flex-direction: column;
 }
 
 .trending-container {
 	flex: 1;
 	display: grid;
+	border-radius: 1rem;
+	background-color: white;
+	padding: 1rem 1rem 1rem 1rem;
+}
+
+.trending-cards {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.trending img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	grid-row: 1/3;
+	align-self: center;
+	justify-self: center;
+}
+
+.trending {
+	h3 {
+		align-self: flex-end;
+		font-size: 1rem;
+		color: rgba(0, 0, 0, 0.9);
+	}
+	h4 {
+		font-size: 0.8rem;
+		color: rgba(0, 0, 0, 0.85);
+	}
 }
 
 footer {
